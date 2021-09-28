@@ -1,0 +1,30 @@
+@font-face {
+    font-family: fuenteEncabezado;
+    src: url(Satisfy/Satisfy-Regular.ttf);
+}
+
+h1 {
+    font-family: fuenteEncabezado;
+}
+
+.row {
+    margin: 0;
+}
+
+#barra_nav {
+    height: 70px;
+}
+
+#hamburguesa_grande {
+    width: 100%;
+}
+
+#carrito_img {
+    display: inline-block;
+    height: 70px;
+}
+
+[class^="col-"] {
+    display: inline-block;
+}
+
