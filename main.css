@@ -1,30 +1,68 @@
 @font-face {
-    font-family: fuenteEncabezado;
-    src: url(Satisfy/Satisfy-Regular.ttf);
+  font-family: fuenteEncabezado;
+  src: url(Satisfy/Satisfy-Regular.ttf);
 }
 
 h1 {
-    font-family: fuenteEncabezado;
+  font-family: fuenteEncabezado;
+  margin: 1% 0 0 0;
+}
+
+.navbar-nav {
+  padding: 1rem;
+}
+
+.nav-item {
+  margin-right: 2rem;
 }
 
 .row {
-    margin: 0;
+  margin: 0;
+}
+
+.seccion {
+  border-top: 1px solid #eeeeed;
+  border-bottom: 1px solid #eeeeed;
+  padding: 1% 0%;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.btn-beige {
+  background-color: #f3e8dd;
+  border: 1px solid black;
+}
+
+.btn-rojo_claro {
+  background-color: #fb565a;
+  border: 1px solid green;
 }
 
 #barra_nav {
-    height: 70px;
+  height: 100px;
 }
 
 #hamburguesa_grande {
-    width: 100%;
+  width: 100%;
 }
 
 #carrito_img {
-    display: inline-block;
-    height: 70px;
+  display: inline-block;
+  height: 70px;
+}
+
+#num_items {
+  margin: 40% 0 0 0;
+}
+
+#footer {
+  text-align: center;
 }
 
 [class^="col-"] {
-    display: inline-block;
+  display: inline-block;
 }
-

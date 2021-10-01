@@ -1,35 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Parcial 1</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-10" id="titulo"><h1>Restaurant & Lounge</h1></div>
-                <div class="col-1" id="carrito"><img id="carrito_img" src="img/carrito.png"></div>
-                <div class="col-1" id="items"><h4>0 items</h4></div>
-            </div>
-            <div class="row">
-                <img id="hamburguesa_grande" src="img/hamburguesa.png">
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-item nav-link active" id="burgers">Burgers</a>
-                    <a class="nav-item nav-link active" id="tacos">Tacos</a>
-                    <a class="nav-item nav-link active" id="salads">Salads</a>
-                    <a class="nav-item nav-link active" id="desserts">Desserts</a>
-                    <a class="nav-item nav-link active" id="drinks">Drinks & Sides</a>
-                  </div>
-                </div>
-            </nav>
-            <div id="titulo_cat"></div>
-            <div id="contenido"></div>
+  <head>
+    <title>Parcial 1</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-10" id="titulo"><h1>Restaurant & Lounge</h1></div>
+        <div class="col-1" id="carrito">
+          <a 
+            id="carrito_compras" 
+            href="javascript:;">
+            <img id="carrito_img" src="img/carrito.png" alt="Carrito de compras"/>
+          </a>
         </div>
-        <script src='main.js'></script>
-    </body>
+        <div class="col-1" id="items"><h6 id="num_items">0 items</h6></div>
+      </div>
+      <div class="row seccion">
+        <img id="hamburguesa_grande" src="img/hamburguesa.png" alt="Fotografía principal"/>
+      </div>
+      <div class="seccion">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a
+                class="nav-item nav-link active"
+                id="burgers"
+                href="javascript:;">
+                Burgers
+              </a>
+              <a class="nav-item nav-link active" id="tacos" href="javascript:;">
+                Tacos
+              </a>
+              <a
+                class="nav-item nav-link active"
+                id="salads"
+                href="javascript:;">
+                Salads
+              </a>
+              <a
+                class="nav-item nav-link active"
+                id="desserts"
+                href="javascript:;">
+                Desserts
+              </a>
+              <a
+                class="nav-item nav-link active"
+                id="drinks"
+                href="javascript:;">
+                Drinks & Sides
+                </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="seccion" id="titulo_cat"></div>
+      <div id="contenido"></div>
+      <div class="row">
+        <div class="col">
+          <h6 id="footer">
+            Contact us: +57 3102105253 - info@restaurant.com - @restaurant
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal"
+      id="modalClose"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="modalClose"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Cancel the order</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Are you sure about cancelling the order?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-beige"
+              data-dismiss="modal"
+              id="cancelarOrden">
+              Yes, I want to cancel the order
+            </button>
+            <button
+              type="button"
+              class="btn btn-rojo_claro"
+              data-dismiss="modal">
+              No, I want to continue adding products
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+  </body>
 </html>
